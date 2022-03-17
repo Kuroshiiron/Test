@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Convert online form to pdf</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <h2>Convert online form to pdf</h2>
+    <form>
+        <div>
+            Name: <input type="text" id="name" placeholder="Name">
+        </div>
+        <div>
+            Mobile Number: <input type="text" id="hp" placeholder="e.g 12345678">
+        </div>
+        <button onclick="createPDF()" id="button">Submit</button>
+    </form>
+    <div>
+        <h2>Reading uploaded pdf file</h2>
+        <input type="file" id="inpFile">
+        <button type="button" id="btnUpload">Upload</button>
+        <div id="resultText"></div>
+    </div>
+</body>
+
+</html>
