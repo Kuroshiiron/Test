@@ -35,3 +35,16 @@ btnUpload.addEventListener("click", () => {
         resultText.value = extractedText.trim();
     });
 });
+
+// Auto fill
+document.getElementById("Btn").addEventListener("click", function(){ 
+	var company = document.getElementById("company").value;
+    var name = document.getElementById("name").value;
+    var cust = document.getElementById("name1");
+    var cpy = document.getElementById("cpy");
+
+    console.log(company);
+    console.log(name)
+    cpy.innerHTML = "Company: " + company;
+    cust.innerHTML = "Name: " + name;
+});
