@@ -26,6 +26,9 @@ function createPDF() {
         doc.setTextColor(0, 0, 0); //black colour
        
         doc.text(Mr, 45.1, 108.9);
+        doc.text(Mrs, 57.5, 108.9);
+        doc.text(Ms, 69.9, 108.9);
+        doc.text(PA, 100, 109);
         doc.text(name, 90, 109);
         doc.text(dob, 45.5, 115);
         doc.text(Tel, 50, 126.5);
