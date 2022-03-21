@@ -14,6 +14,7 @@ Create fill PDF form
 https://www.youtube.com/watch?v=GHTrsUtmQTo&t=305s
 Encode the img
 https://www.base64-image.de/
+
 Library for filePreview
 https://stackoverflow.com/questions/51365016/how-to-preview-pdf-file-before-download-using-jspdf
 https://www.npmjs.com/package/filepreview
