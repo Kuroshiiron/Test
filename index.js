@@ -1,6 +1,6 @@
 // Saves the form value in PDF
 function createPDF() {
-    if (document.getElementById("name").value == "" && document.getElementById("hp").value == "") {
+    if (document.getElementById("name").value == "" && document.getElementById("dob").value == "") {
         alert("Please enter all the fields");
     }
     else {
@@ -9,7 +9,7 @@ function createPDF() {
         var doc = new jsPDF();
 
         doc.text(document.getElementById("name").value, 10, 10);
-        doc.text(document.getElementById("hp").value, 25, 25);
+        doc.text(document.getElementById("dob").value, 25, 25);
 
         // save the file
         doc.save("ouput.pdf");
