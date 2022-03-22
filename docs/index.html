@@ -27,6 +27,13 @@
     <div>
       Date of Birth: <input type="number" id="dob" minlength="8" placeholder="DDMMYYYY">
     </div>
+    <p>
+      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS()" value="•">
+      &emsp;No <input type="radio" name="US" id="No" onclick="hideUS()" value="•">
+      <div id="hidden">
+        If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
+      </div>
+    </p>
     <div>
       Contact Details: <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678">(Office)
       <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)
