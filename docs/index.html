@@ -24,8 +24,8 @@
         Ms. <input type="radio" name="M" id="Ms" value="•">
       </div> -->
     <div>
-      Mr. <input type="radio" name="M" id="Mr" value="•">
-      Mrs. <input type="radio" name="M" id="Mrs" value="•">
+      Mr. <input type="radio" name="M" id="Mr" value="•">&ensp;
+      Mrs. <input type="radio" name="M" id="Mrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="Ms" value="•">
       Policy Holder's Name: <input type="text" id="name" placeholder="Name" required>
       Date of Birth: <input type="date" id="dob" required>
@@ -33,7 +33,7 @@
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS()" value="•">
       &emsp;No <input type="radio" name="US" id="No" onclick="hideUS()" value="•">
-    <div id="hidden">
+    <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
     </div>
     </p>
@@ -47,7 +47,24 @@
       Nature of Business: <input type="text" id="business">
     </div>
     <h4>Claimant Information(please complete if different for Policy Holder)</h4>
-
+    <div>
+      Mr. <input type="radio" name="M" id="IMr" value="•">&ensp;
+      Mrs. <input type="radio" name="M" id="IMrs" value="•">&ensp;
+      Ms. <input type="radio" name="M" id="IMs" value="•">
+      Insured Person's Full Name: <input type="text" id="Iname" placeholder="Insured Name">&emsp;
+      Identity Card / Passport No. : <input type="text" id="Iname" placeholder="S1234567Y">
+    </div>
+    <p>
+      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS()" value="•">
+      &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS()" value="•">
+    <div class="hidden">
+      If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="ISSN">
+    </div>
+    </p>
+    <div>
+      Martial Status: &ensp;<input type="radio" name="M" id="IMr" value="•">Single
+      &ensp;<input type="radio" name="M" id="IMrs" value="•">Married
+    </div>
     <input type="submit" onclick="createPDF()" id="button">
   </form>
 </body>
