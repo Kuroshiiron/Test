@@ -49,13 +49,13 @@ function createPDF() {
 
 // function to display the hidden div
 function displayUS() {
-    var x = document.getElementById("hidden");
+    var x = document.getElementsByClassName("hidden");
     x.style.display = "block";
 }
 
 // function to hide the hidden div
 function hideUS() {
-    var y = document.getElementById("hidden");
+    var y = document.getElementsByClassName("hidden");
     y.style.display = "none";
 }
 // function to uplod pdf file and display it in HTML
