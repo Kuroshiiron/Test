@@ -1,47 +1,44 @@
 <html>
 
-<head>
-  <title>Convert online form to pdf</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-  <script src="jspdf.min.js"></script>
-  <script src="index.js"></script>
-</head>
+  <head>
+    <title>Convert online form to pdf</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+    <script src="jspdf.min.js"></script>
+    <script src="index.js"></script>
+  </head>
 
-<body>
-  <h2>Convert online form to pdf</h2>
-  <form>
-    <p>
-      Type of claims: <input type="checkbox" id="PA" value="✔"> Personal Accident (Please complete Section I, II, Vand
-      VI*) <input type="checkbox" id="Ill" value="✔">Illness (Please complete Section I, III, V, VI)
-    </p>
-    <div>
-      Mr. <input type="radio" id="Mr" value="•">
-      Mrs. <input type="radio" id="Mrs" value="•">
-      Ms. <input type="radio" id="Ms" value="•">
-    </div>
-    <div>
-      Policy Holder's Name: <input type="text" id="name" placeholder="Name">
-    </div>
-    <div>
-      Date of Birth: <input type="number" id="dob" minlength="8" placeholder="DDMMYYYY">
-    </div>
-    <p>
-      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS()" value="•">
-      &emsp;No <input type="radio" name="US" id="No" onclick="hideUS()" value="•">
-      <div id="hidden">
-        If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
+  <body>
+    <h2>Convert online form to pdf</h2>
+    <form>
+      <p>
+        Type of claims: <input type="checkbox" id="PA" value="✔"> Personal Accident (Please complete Section I, II, Vand
+        VI*) <input type="checkbox" id="Ill" value="✔">Illness (Please complete Section I, III, V, VI)
+      </p>
+      <div>
+        Mr. <input type="radio" name="M" id="Mr" value="•">
+        Mrs. <input type="radio" name="M" id="Mrs" value="•">
+        Ms. <input type="radio" name="M" id="Ms" value="•">
       </div>
-    </p>
-    <div>
-      Contact Details: <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678">(Office)
-      <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)
-      <input type="email" id="email" placeholder="xx@xxxx.com">(Email)
-    </div>
-    <button onclick="createPDF()" id="button">Submit</button>
-  </form>
-</body>
+      <div>
+        Policy Holder's Name: <input type="text" id="name" placeholder="Name" required>
+        Date of Birth: <input type="date" id="dob" minlength="8" required>
+      </div>
+      <p>
+        Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS()" value="•">
+        &emsp;No <input type="radio" name="US" id="No" onclick="hideUS()" value="•">
+        <div id="hidden">
+          If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
+        </div>
+      </p>
+      <div>
+        Contact Details: <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678">(Office)
+        <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)
+        <input type="email" id="email" placeholder="xx@xxxx.com">(Email)
+      </div>
+      <input type="submit" onclick="createPDF()" id="button">
+    </form>
+  </body>
 
 </html>
