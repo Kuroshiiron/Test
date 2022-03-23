@@ -18,13 +18,13 @@
       VI*) <input type="checkbox" id="Ill" value="✔">Illness (Please complete Section I, III, V, VI)
     </p>
     <h4>Section I: Policy Holder Information</h4>
-    <div>
+    <p>
       Mr. <input type="radio" name="M" id="Mr" value="•">&ensp;
       Mrs. <input type="radio" name="M" id="Mrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="Ms" value="•">
       Policy Holder's Name: <input type="text" id="name" placeholder="Name" required>
       Date of Birth: <input type="date" id="dob" required>
-    </div>
+      </div>
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS(0)" value="•">
       &emsp;No <input type="radio" name="US" id="No" onclick="hideUS(0)" value="•">
@@ -46,8 +46,9 @@
       Mr. <input type="radio" name="M" id="IMr" value="•">&ensp;
       Mrs. <input type="radio" name="M" id="IMrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="IMs" value="•">
-      Insured Person's Full Name: <input type="text" id="Iname" placeholder="Insured Name">&emsp;
-      Identity Card / Passport No. : <input type="text" id="Iname" placeholder="S1234567Y">
+      Insured Person's Full Name: <input type="text" id="Fname" placeholder="Insured's First Name">&emsp;<input
+        type="text" id="Lname" placeholder="Insured's Last Name">
+      Identity Card / Passport No. : <input type="text" id="ic" placeholder="S1234567Y">
     </div>
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
@@ -57,8 +58,8 @@
     </div>
     </p>
     <div>
-      Martial Status: &ensp;<input type="radio" name="M" id="IMr" value="•">Single
-      &ensp;<input type="radio" name="M" id="IMrs" value="•">Married
+      Martial Status: &ensp;<input type="radio" name="status" id="S" value="•">Single
+      &ensp;<input type="radio" name="status" id="M" value="•">Married
     </div>
     <input type="submit" onclick="createPDF()" id="button">
   </form>
