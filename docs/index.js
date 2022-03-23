@@ -35,7 +35,7 @@ function createPDF() {
             doc.text(Ms, 69.9, 108.9);
         }
 
-        doc.text(PA, 100, 109);
+        doc.text(PA, 36, 88);
         doc.text(name, 90, 109);
         doc.text(dob, 45.5, 115);
         doc.text(Tel, 50, 126.5);
