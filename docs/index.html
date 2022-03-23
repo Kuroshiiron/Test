@@ -14,8 +14,9 @@
   <h2>Personal Accident or Sickness Claim Form</h2>
   <form>
     <p>
-      Type of claims: <input type="checkbox" id="PA" value="✔"> Personal Accident (Please complete Section I, II, Vand
-      VI*) <input type="checkbox" id="Ill" value="✔">Illness (Please complete Section I, III, V, VI)
+      Type of claims: <input type="radio" name="toc" id="PA" value="/"> Personal Accident (Please complete Section I,
+      II, Vand
+      VI*) <input type="radio" name="toc" id="Ill" value="/">Illness (Please complete Section I, III, V, VI)
     </p>
     <h4>Section I: Policy Holder Information</h4>
     <p>
@@ -24,7 +25,7 @@
       Ms. <input type="radio" name="M" id="Ms" value="•">
       Policy Holder's Name: <input type="text" id="name" placeholder="Name" required>
       Date of Birth: <input type="date" id="dob" required>
-      </div>
+    </p>
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS(0)" value="•">
       &emsp;No <input type="radio" name="US" id="No" onclick="hideUS(0)" value="•">
@@ -32,24 +33,24 @@
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
     </div>
     </p>
-    <div>
+    <p>
       Contact Details: <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678">(Office)&ensp;
       <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)&ensp;
       <input type="email" id="email" placeholder="xx@xxxx.com">(Email)
-    </div>
-    <div>
+    </p>
+    <p>
       Occupation: <input type="text" id="occupation" placeholder="e.g Manager">
       Nature of Business: <input type="text" id="business">
-    </div>
+    </p>
     <h4>Claimant Information(please complete if different for Policy Holder)</h4>
-    <div>
+    <p>
       Mr. <input type="radio" name="M" id="IMr" value="•">&ensp;
       Mrs. <input type="radio" name="M" id="IMrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="IMs" value="•">
       Insured Person's Full Name: <input type="text" id="Fname" placeholder="Insured's First Name">&emsp;<input
         type="text" id="Lname" placeholder="Insured's Last Name">
       Identity Card / Passport No. : <input type="text" id="ic" placeholder="S1234567Y">
-    </div>
+    </p>
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
       &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS(1)" value="•">
@@ -57,10 +58,36 @@
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="ISSN">
     </div>
     </p>
-    <div>
-      Martial Status: &ensp;<input type="radio" name="status" id="S" value="•">Single
-      &ensp;<input type="radio" name="status" id="M" value="•">Married
-    </div>
+    <p>
+      Martial Status: &ensp;<input type="radio" name="status" id="S" value="•"> Single
+      &ensp;<input type="radio" name="status" id="M" value="•"> Married
+    </p>
+    <p>
+      Date of Birth: Date of Birth: <input type="date" id="Idob"> Gender:&ensp;<input type="radio" name="sex" id="male"
+        value="•"> Male
+      &ensp;<input type="radio" name="sex" id="female" value="•"> Female
+    </p>
+    <p>
+      Contact Details: <input type="number" id="home" pattern="[0-9]{8}" placeholder="e.g 12345678">(Residential)&ensp;
+      <input type="number" id="Ihp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)&ensp;
+      <input type="email" id="Iemail" placeholder="xx@xxxx.com">(Email)
+    </p>
+    <p>
+      Occupation: <input type="text" id="Ioccupation" placeholder="e.g Manager">
+      Nature of Business: <input type="text" id="Ibusiness">
+    </p>
+    <p>
+      Date of Insured Person Joined the Company: <input type="date" id="join">
+    </p>
+    <h4>
+      Preferred Mailing Address
+    </h4>
+    <p>
+      Predferred Mailing Address: <input type="text" id="pMail">
+    </p>
+    <h4>
+      Section II: Accident Related Claims Only
+    </h4>
     <input type="submit" onclick="createPDF()" id="button">
   </form>
 </body>

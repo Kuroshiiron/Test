@@ -59,6 +59,7 @@ function hideUS(n) {
     var y = document.getElementsByClassName("hidden")[n];
     y.style.display = "none";
 }
+
 // function to uplod pdf file and display it in HTML
 const inpFile = document.getElementById("inpFile");
 const btnUpload = document.getElementById("btnUpload");
