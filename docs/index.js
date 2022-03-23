@@ -48,14 +48,15 @@ function createPDF() {
 }
 
 // function to display the hidden div
-function displayUS() {
-    var x = document.getElementsByClassName("hidden");
+function displayUS(n) {
+    /* var x = document.getElementById("hidden"); */
+    var x = document.getElementsByClassName("hidden")[n];
     x.style.display = "block";
 }
 
 // function to hide the hidden div
-function hideUS() {
-    var y = document.getElementsByClassName("hidden");
+function hideUS(n) {
+    var y = document.getElementsByClassName("hidden")[n];
     y.style.display = "none";
 }
 // function to uplod pdf file and display it in HTML
