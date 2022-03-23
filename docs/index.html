@@ -16,7 +16,7 @@
     <p>
       Type of claims: <input type="radio" name="toc" id="PA" value="/"> Personal Accident (Please complete Section I,
       II, Vand
-      VI*) <input type="radio" name="toc" id="Ill" value="/">Illness (Please complete Section I, III, V, VI)
+      VI*) <input type="radio" name="toc" id="Ill" value="/"> Illness (Please complete Section I, III, V, VI)
     </p>
     <h4>Section I: Policy Holder Information</h4>
     <p>
@@ -34,9 +34,10 @@
     </div>
     </p>
     <p>
-      Contact Details: <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678">(Office)&ensp;
-      <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No.">(Mobile)&ensp;
-      <input type="email" id="email" placeholder="xx@xxxx.com">(Email)
+      Contact Details:
+      <input type="number" id="Tel" pattern="[0-9]{8}" placeholder="e.g 12345678"> (Office)&ensp;
+      <input type="number" id="hp" pattern="[0-9]{8}" placeholder="Mobile No."> (Mobile)&ensp;
+      <input type="email" id="email" placeholder="xx@xxxx.com"> (Email)
     </p>
     <p>
       Occupation: <input type="text" id="occupation" placeholder="e.g Manager">
@@ -47,12 +48,14 @@
       Mr. <input type="radio" name="M" id="IMr" value="•">&ensp;
       Mrs. <input type="radio" name="M" id="IMrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="IMs" value="•">
-      Insured Person's Full Name: <input type="text" id="Fname" placeholder="Insured's First Name">&emsp;<input
-        type="text" id="Lname" placeholder="Insured's Last Name">
+      Insured Person's Full Name:
+      <input type="text" id="Fname" placeholder="Insured's First Name">&emsp;
+      <input type="text" id="Lname" placeholder="Insured's Last Name">
       Identity Card / Passport No. : <input type="text" id="ic" placeholder="S1234567Y">
     </p>
     <p>
-      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
+      Are you a US citizen?&emsp;
+      Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
       &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS(1)" value="•">
     <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="ISSN">
@@ -83,12 +86,34 @@
       Preferred Mailing Address
     </h4>
     <p>
-      Predferred Mailing Address: <input type="text" id="pMail">
+      Preferred Mailing Address: <input type="text" id="pMail">
     </p>
-    <h4>
-      Section II: Accident Related Claims Only
-    </h4>
+    <h4>Section II: Accident Related Claims Only</h4>
+    <p>
+      Type of Disablement Claim:<br>
+      <input type="radio" name="tdc" id="permTotal"> Permanent Total Disablement<br>
+      <input type="radio" name="tdc" id="permPartial"> Permanent Partial Disablement<br>
+      <input type="radio" name="tdc" id="tem"> Weekly Benefit for temporary total Disablement<br>
+      <input type="radio" name="tdc" id="AMR"> Accident Medical Reimbursement<br>
+      <input type="radio" name="tdc" id="DHI"> Daily Hospital Income<br>
+      <input type="radio" name="tdc" id="others"> Others (please specify)
+    <div class="hidOther">
+      <input type="text" id="detail" placeholder="specify here..">
+    </div>
+    </p>
+    <p>
+      The nature of your claim (if the claim is in respect of accidental death)<br>
+      <input type="radio" name="natc" id="deathBen"> Death Benefits<br>
+      <input type="radio" name="natc" id="disa"> Disappearance<br>
+      <input type="radio" name="natc" id="famAll"> Family Allowance<br>
+      <input type="radio" name="natc" id="CDA"> Compassionate Death Allowance<br>
+      <input type="radio" name="natc" id="others"> Others (please specify)
+    <div class="hidOther">
+      <input type="text" id="ncdetail" placeholder="specify here..">
+    </div>
+    </p>
     <input type="submit" onclick="createPDF()" id="button">
+
   </form>
 </body>
 
