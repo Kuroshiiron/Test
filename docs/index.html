@@ -18,11 +18,6 @@
       VI*) <input type="checkbox" id="Ill" value="✔">Illness (Please complete Section I, III, V, VI)
     </p>
     <h4>Section I: Policy Holder Information</h4>
-    <!-- <div>
-        Mr. <input type="radio" name="M" id="Mr" value="•">
-        Mrs. <input type="radio" name="M" id="Mrs" value="•">
-        Ms. <input type="radio" name="M" id="Ms" value="•">
-      </div> -->
     <div>
       Mr. <input type="radio" name="M" id="Mr" value="•">&ensp;
       Mrs. <input type="radio" name="M" id="Mrs" value="•">&ensp;
@@ -31,8 +26,8 @@
       Date of Birth: <input type="date" id="dob" required>
     </div>
     <p>
-      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS()" value="•">
-      &emsp;No <input type="radio" name="US" id="No" onclick="hideUS()" value="•">
+      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS(0)" value="•">
+      &emsp;No <input type="radio" name="US" id="No" onclick="hideUS(0)" value="•">
     <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
     </div>
@@ -55,8 +50,8 @@
       Identity Card / Passport No. : <input type="text" id="Iname" placeholder="S1234567Y">
     </div>
     <p>
-      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS()" value="•">
-      &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS()" value="•">
+      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
+      &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS(1)" value="•">
     <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="ISSN">
     </div>
