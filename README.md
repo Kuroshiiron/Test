@@ -19,3 +19,6 @@ Library for filePreview
 https://stackoverflow.com/questions/51365016/how-to-preview-pdf-file-before-download-using-jspdf
 https://www.npmjs.com/package/filepreview
 
+How to auto format user input
+https://webdesign.tutsplus.com/tutorials/auto-formatting-input-value--cms-26745
+https://www.aspsnippets.com/Articles/Auto-Format-Date-Field-TextBox-to-ddMMyyyy-while-typing-using-JavaScript.aspx
