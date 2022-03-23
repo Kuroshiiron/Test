@@ -21,4 +21,8 @@ https://www.npmjs.com/package/filepreview
 
 How to auto format user input
 https://webdesign.tutsplus.com/tutorials/auto-formatting-input-value--cms-26745
+
 https://www.aspsnippets.com/Articles/Auto-Format-Date-Field-TextBox-to-ddMMyyyy-while-typing-using-JavaScript.aspx
+
+jsPDF insert page
+https://rawgit.com/MrRio/jsPDF/master/docs/jsPDF.html#insertPage
