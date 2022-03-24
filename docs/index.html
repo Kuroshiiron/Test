@@ -24,7 +24,10 @@
       Mrs. <input type="radio" name="M" id="Mrs" value="•">&ensp;
       Ms. <input type="radio" name="M" id="Ms" value="•">
       Policy Holder's Name: <input type="text" id="name" placeholder="Name" required>
-      Date of Birth: <input type="date" id="dob" required>
+      Date of Birth: <input type="date" id="dob" placeholder="DD-MM-YYYY" required>
+      <!-- <input type="number" id="day" min="1" max="31" placeholder="DD" required>
+      <input type="number" id="month" min=placeholder="MM" required>
+      <input type="number" id="dob" placeholder="YYYY" required> -->
     </p>
     <p>
       Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS(0)" value="•">
@@ -45,9 +48,9 @@
     </p>
     <h4>Claimant Information(please complete if different for Policy Holder)</h4>
     <p>
-      Mr. <input type="radio" name="M" id="IMr" value="•">&ensp;
-      Mrs. <input type="radio" name="M" id="IMrs" value="•">&ensp;
-      Ms. <input type="radio" name="M" id="IMs" value="•">
+      Mr. <input type="radio" name="IM" id="IMr" value="•">&ensp;
+      Mrs. <input type="radio" name="IM" id="IMrs" value="•">&ensp;
+      Ms. <input type="radio" name="IM" id="IMs" value="•">
       Insured Person's Full Name:
       <input type="text" id="Fname" placeholder="Insured's First Name">&emsp;
       <input type="text" id="Lname" placeholder="Insured's Last Name">
@@ -113,11 +116,9 @@
     </div>
     </p>
     <input type="submit" onclick="createPDF()" id="button">
+    <!-- <input type="submit" id="btn"> -->
 
   </form>
-  <input type="text" id="text">
-  <div id="result"></div>
-  <input type="submit" onclick="separate()">
 </body>
 
 </html>
