@@ -30,8 +30,8 @@
       <input type="number" id="dob" placeholder="YYYY" required> -->
     </p>
     <p>
-      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="displayUS(0)" value="•">
-      &emsp;No <input type="radio" name="US" id="No" onclick="hideUS(0)" value="•">
+      Are you a US citizen?&emsp; Yes <input type="radio" name="US" id="Yes" onclick="show(0)" value="•">
+      &emsp;No <input type="radio" name="US" id="No" onclick="hide(0)" value="•">
     <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="SSN">
     </div>
@@ -58,8 +58,8 @@
     </p>
     <p>
       Are you a US citizen?&emsp;
-      Yes <input type="radio" name="US" id="IYes" onclick="displayUS(1)" value="•">
-      &emsp;No <input type="radio" name="US" id="INo" onclick="hideUS(1)" value="•">
+      Yes <input type="radio" name="IUS" id="IYes" onclick="show(1)" value="•">
+      &emsp;No <input type="radio" name="IUS" id="INo" onclick="hide(1)" value="•">
     <div class="hidden">
       If "Yes", Please Provide your Social Security No. (SSN): <input type="text" id="ISSN">
     </div>
@@ -94,26 +94,31 @@
     <h4>Section II: Accident Related Claims Only</h4>
     <p>
       Type of Disablement Claim:<br>
-      <input type="radio" name="tdc" id="permTotal"> Permanent Total Disablement<br>
-      <input type="radio" name="tdc" id="permPartial"> Permanent Partial Disablement<br>
-      <input type="radio" name="tdc" id="tem"> Weekly Benefit for temporary total Disablement<br>
-      <input type="radio" name="tdc" id="AMR"> Accident Medical Reimbursement<br>
-      <input type="radio" name="tdc" id="DHI"> Daily Hospital Income<br>
-      <input type="radio" name="tdc" id="others"> Others (please specify)
-    <div class="hidOther">
+      <input type="radio" name="tdc" id="permTotal" onclick="hide(2)" value="/"> Permanent Total Disablement<br>
+      <input type="radio" name="tdc" id="permPartial" onclick="hide(2)" value="/"> Permanent Partial Disablement<br>
+      <input type="radio" name="tdc" id="tem" onclick="hide(2)" value="/"> Weekly Benefit for temporary total Disablement<br>
+      <input type="radio" name="tdc" id="AMR" onclick="hide(2)" value="/"> Accident Medical Reimbursement<br>
+      <input type="radio" name="tdc" id="DHI" onclick="hide(2)" value="/"> Daily Hospital Income<br>
+      <input type="radio" name="tdc" id="others" onclick="show(2)" value="/"> Others (please specify)
+    <div class="hidden">
       <input type="text" id="detail" placeholder="specify here..">
     </div>
     </p>
     <p>
       The nature of your claim (if the claim is in respect of accidental death)<br>
-      <input type="radio" name="natc" id="deathBen"> Death Benefits<br>
-      <input type="radio" name="natc" id="disa"> Disappearance<br>
-      <input type="radio" name="natc" id="famAll"> Family Allowance<br>
-      <input type="radio" name="natc" id="CDA"> Compassionate Death Allowance<br>
-      <input type="radio" name="natc" id="others"> Others (please specify)
-    <div class="hidOther">
+      <input type="radio" name="natc" id="deathBen" onclick="hide(3)" value="/"> Death Benefits<br>
+      <input type="radio" name="natc" id="disa" onclick="hide(3)" value="/"> Disappearance<br>
+      <input type="radio" name="natc" id="famAll" onclick="hide(3)" value="/"> Family Allowance<br>
+      <input type="radio" name="natc" id="CDA" onclick="hide(3)" value="/"> Compassionate Death Allowance<br>
+      <input type="radio" name="natc" id="Nothers" onclick="show(3)" value="/"> Others (please specify)
+    <div class="hidden">
       <input type="text" id="ncdetail" placeholder="specify here..">
     </div>
+    </p>
+    <p>
+      Date and time of accident:
+      <input type="text" id="day" placeholder="DD"> / <input type="text" id="month" placeholder="MM"> / <input type="text" id="year" placeholder="YYYY">
+      
     </p>
     <input type="submit" onclick="createPDF()" id="button">
     <!-- <input type="submit" id="btn"> -->
