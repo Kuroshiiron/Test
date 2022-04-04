@@ -117,8 +117,23 @@
     </p>
     <p>
       Date and time of accident:
-      <input type="text" id="day" placeholder="DD"> / <input type="text" id="month" placeholder="MM"> / <input type="text" id="year" placeholder="YYYY">
-      
+      <input type="text" id="day" placeholder="DD"> / <input type="text" id="month" placeholder="MM"> / <input type="text" id="year" placeholder="YYYY"><br>
+      <input type="number" id="hour" placeholder="Hour"> :
+      <input type="number" id="min" placeholder="Mins">
+      <input type="radio" name="time" id="am"
+        value="•"> AM
+      &ensp;<input type="radio" name="time" id="pm" value="•"> PM
+    </p>
+    <p>
+    Where did the accident occur?
+    <input type="text" id="whrA"><br>
+    How did the accident occur?
+    <input type="text" id="howA"><br>
+    Injuries Sustained
+    <input type="text" id="inj"><br>
+    If you had a history of similar injury, which you have experienced in the past, please give details as to when, where and from whom you received medical diagnosis, treatment, consultation or prescribed drugs.
+    <input type="text" id="detailA">
+    
     </p>
     <input type="submit" onclick="createPDF()" id="button">
     <!-- <input type="submit" id="btn"> -->
