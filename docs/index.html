@@ -117,7 +117,7 @@
     </p>
     <p>
       Date and time of accident:
-      <input type="number" id="day" placeholder="DD"> / <input type="number" id="month" placeholder="MM"> / <input type="number" id="year" placeholder="YYYY"><br>
+      <input type="number" class="date" id="day" placeholder="DD"> / <input type="number" class="date" id="month" placeholder="MM"> / <input type="number" class="date" id="year" placeholder="YYYY"><br>
       <input type="number" id="hour" placeholder="Hour"> :
       <input type="number" id="min" placeholder="Mins">
       <input type="radio" name="time" id="am"
@@ -142,22 +142,209 @@
     </p>
     <p>
     Disablement Comencement:
-    <input type="number" id="DCday" placeholder="DD"> / <input type="number" id="DCmonth" placeholder="MM"> / <input type="number" id="DCyear" placeholder="YYYY"><br>
+    <input type="number" class="date" id="DCday" placeholder="DD"> / <input type="number" class="date" id="DCmonth" placeholder="MM"> / <input type="number" class="date" id="DCyear" placeholder="YYYY"><br>
       <input type="number" id="DChour" placeholder="Hour"> :
       <input type="number" id="DCmin" placeholder="Mins">
-      <input type="radio" name="time" id="DCam"
-        value="•"> AM
+      <input type="radio" name="time" id="DCam"value="•"> AM
       &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM
     </p>
     <p>
     Date of Death:
-    <input type="number" id="dayDD" placeholder="DD"> / <input type="text" id="monthDD" placeholder="MM"> / <input type="text" id="yearDD" placeholder="YYYY">
+    <input type="number" class="date" id="dayDD" placeholder="DD"> / <input type="number" class="date" id="monthDD" placeholder="MM"> / <input type="number" class="date" id="yearDD" placeholder="YYYY">
     </p>
     <p>
     Are you still suffering the above stated disability?<br>
-    <input type="radio" name="ac" id="acyes" value="/"> If yes, please advice the expected date and time of returning to work
-    <input type="number" id="dayDD" placeholder="DD"> / <input type="text" id="monthDD" placeholder="MM"> / <input type="text" id="yearDD" placeholder="YYYY">
-      <input type="radio" name="ac" id="acno" value="/"> If no, please advise the date and time of returning to work<br>
+    <input type="radio" name="ac" id="acyes" value="•"> If yes, please advice the expected date and time of returning to work<br>
+    <input type="number" class="date" id="dayDD" placeholder="DD"> / <input type="number" class="date" id="monthDD" placeholder="MM"> / <input type="number" class="date" id="yearDD" placeholder="YYYY">
+    <input type="radio" name="time" id="DCam" value="•"> AM
+    &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM<br>
+    <input type="radio" name="ac" id="acno" value="•"> If no, please advise the date and time of returning to work<br>
+    <input type="number" class="date" id="dayDD" placeholder="DD"> / <input type="number" class="date" id="monthDD" placeholder="MM"> / <input type="number" class="date" id="yearDD" placeholder="YYYY">
+    <input type="radio" name="time" id="DCam"value="•"> AM
+    &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM
+    </p>
+    <p>
+      Have you sustained any fractures from this accident?<br>
+      <input type="radio" name="fractures" id="fYes" onclick="show(4)" value="•"> Yes
+      &emsp;<input type="radio" name="fractures" id="fNo" onclick="hide(4)" value="•"> No
+      <div class="hidden">
+        If yes, please advise the type of fractures<br>
+        <input type="text" id="fdetail">
+      </div>
+    </p>
+    <p>
+      Have you sustained a burn injury from this accident?<br>
+      <input type="radio" name="burn" id="bYes" onclick="show(5)" value="•"> Yes
+      &emsp;<input type="radio" name="burn" id="bNo" onclick="hide(5)" value="•"> No
+      <div class="hidden">
+        If yes, please provide the following information
+        <input type="radio" name="body" id="head" value="•"> Head
+      &emsp;<input type="radio" name="body" id="body" value="•"> Body<br>
+      Degree of Burn:
+      <input type="text" id="degree">
+      </div>
+    </p>
+    <p>
+      Have you lodged a police report?<br>
+      <input type="radio" name="repo" id="rYes" value="•"> Yes
+      &emsp;<input type="radio" name="repo" id="rNo" value="•"> No<br>
+      Date of report:
+      <input type="number" class="date" id="rday" placeholder="DD"> / <input type="number" class="date" id="rmonth" placeholder="MM"> / <input type="number" class="date" id="ryear" placeholder="YYYY"><br>
+      Police Station you lodged report:<br>
+      <input type="text" id="report">
+    </p>
+    <p>
+      Name and address of any witness of the incident?<br>
+      <input type="text" id="witness">
+    </p>
+    <p>
+      Was the sum insured or benefits of your policy based on your monthly salary?<br>
+      <input type="radio" name="sumI" onclick="show(6)" id="sYes" value="•"> Yes
+      &emsp;<input type="radio" name="sumI" id="sNo" onclick="hide(6)" value="•"> No<br>
+      <div class="hidden">
+        If yes, please advise the last drawn salary prior to the accident<br>
+        <input type="text" id="adetail">
+      </div>
+    </p>
+    <p>
+      Please furnish the details of any hospitalization in connection with this injury<br>
+      <table>
+        <tr>
+          <th>Name of hospital</th>
+          <th>Admission Date</th>
+          <th>Date Discharged</th>
+          <th>Admission No.</th>
+          <th>Type of Ward</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="hospitalname" placeholder="Hospital Name"></td>
+          <td><input type="date" id="admit" placeholder="admission date"></td>
+          <td><input type="date" id="discharged" placeholder="date of discharged"></td>
+          <td><input type="text" id="admNo" placeholder="admission No."></td>
+          <td><input type="text" id="ward" onchange="show(7)" placeholder="Ward type"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="hospitalname2" placeholder="Hospital Name"></td>
+          <td><input type="date" id="admit2" placeholder="admission date"></td>
+          <td><input type="date" id="discharged2" placeholder="date of discharged"></td>
+          <td><input type="text" id="admNo2" placeholder="admission No."></td>
+          <td><input type="text" id="ward2" placeholder="Ward type"></td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Please provide information on your first consultation<br>
+      Doctor Consulted: <input type="text" id="docCon"><br>
+      Doctor's Address: <input type="text" id="docAdd"><br>
+      Doctor's Contact No. <input type="number" id="docNo"><br>
+      Doctor's File Ref No. <small>(if applicable)</small> <input type="text" id="docRef">
+    </p>
+    <p>
+      Please provide information of your regular doctor.<br>
+      Regular Doctor: <input type="text" id="regDoc"><br>
+      Regular Doctor's Address: <input type="text" id="regdocAdd"><br>
+      Regular Doctor's Contact No. <input type="number" id="regdocNo"><br>
+      Regular Doctor's File Ref No. <small>(if applicable)</small> <input type="text" id="regdocRef">
+    </p>
+    <h4>Section III: Illness Related Claim Only</h4>
+    <p>
+      Claim Description (fill in items that apply)<br>
+      Give a brief description of the illness suffered.<br>
+      <textarea type="text" id="desc" row="3" cols="40" placeholder="write the description here.."></textarea>
+    </p>
+    <p>
+      If the critical illness is cancer, please advise the type of cancer.<br>
+      <textarea type="text" id="cancerdesc" row="3" cols="40" placeholder="write the type of cancer here.."></textarea>
+    </p>
+    <p>
+      Answer the questions pertaining to your condition stated above.<br>
+      Are there any symptoms which are/were evident for this condition? If yes, please advise the date of onset of the symptoms<br>
+      <input type="number" class="date" id="cday" placeholder="DD"> / <input type="number" class="date" id="cmonth" placeholder="MM"> / <input type="number" class="date" id="cyear" placeholder="YYYY"><br>
+      Have you been recommended to receive/received treatment, advice or diagnosis for this condition? If yes, please advise the date of your 1st consultation.<br>
+      <input type="number" class="date" id="revday" placeholder="DD"> / <input type="number" class="date" id="revmonth" placeholder="MM"> / <input type="number" class="date" id="revyear" placeholder="YYYY"><br>
+      Please describe the symptoms you experienced.<br>
+      <textarea type="text" id="expdesc" row="3" cols="40" placeholder="write the symptoms experienced here.."></textarea>
+    </p>
+    <p>
+      Please provide information of your first consultation.<br>
+      Doctor Consulted: <input type="text" id="IdocCon"><br>
+      Doctor's Address: <input type="text" id="IdocAdd"><br>
+      Doctor's Contact No. <input type="number" id="IdocNo"><br>
+      Doctor's File Ref No. <small>(if applicable)</small> <input type="text" id="IdocRef">
+    </p>
+    <p>
+      Please provide information of your regular doctor.<br>
+      Regular Doctor: <input type="text" id="IregDoc"><br>
+      Regular Doctor's Address: <input type="text" id="IregdocAdd"><br>
+      Regular Doctor's Contact No. <input type="number" id="IregdocNo"><br>
+      Regular Doctor's File Ref No. <small>(if applicable)</small> <input type="text" id="IregdocRef">
+    </p>
+    <p>
+      Please furnish the details of any hospitalization in connection with this illness<br>
+      <table>
+        <tr>
+          <th>Name of hospital</th>
+          <th>Admission Date</th>
+          <th>Date Discharged</th>
+          <th>Admission No.</th>
+          <th>Type of Ward</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="Ihospitalname" placeholder="Hospital Name"></td>
+          <td><input type="date" id="Iadmit" placeholder="admission date"></td>
+          <td><input type="date" id="Idischarged" placeholder="date of discharged"></td>
+          <td><input type="text" id="IadmNo" placeholder="admission No."></td>
+          <td><input type="text" id="Iward" onchange="show(8)" placeholder="Ward type"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="Ihospitalname2" placeholder="Hospital Name"></td>
+          <td><input type="date" id="Iadmit2" placeholder="admission date"></td>
+          <td><input type="date" id="Idischarged2" placeholder="date of discharged"></td>
+          <td><input type="text" id="IadmNo2" placeholder="admission No."></td>
+          <td><input type="text" id="Iward2" onchange="show(9)" placeholder="Ward type"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="Ihospitalname3" placeholder="Hospital Name"></td>
+          <td><input type="date" id="Iadmit3" placeholder="admission date"></td>
+          <td><input type="date" id="Idischarged3" placeholder="date of discharged"></td>
+          <td><input type="text" id="IadmNo3" placeholder="admission No."></td>
+          <td><input type="text" id="Iward3" onchange="show(10)" placeholder="Ward type"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="Ihospitalname4" placeholder="Hospital Name"></td>
+          <td><input type="date" id="Iadmit4" placeholder="admission date"></td>
+          <td><input type="date" id="Idischarged4" placeholder="date of discharged"></td>
+          <td><input type="text" id="IadmNo4" placeholder="admission No."></td>
+          <td><input type="text" id="Iward4" placeholder="Ward type"></td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Have any of your family members experienced this similar or related illness? If yes, please provide details.<br>
+      <table>
+        <tr>
+          <th>Relationship of Family Member</th>
+          <th>Nature of illness</th>
+          <th>Date Diagnosed</th>
+          <th>If Deseased, Date</th>
+          <th>Age</th>
+        </tr>
+        <tr>
+          <td><input type="text" id="relation" placeholder="relationship"></td>
+          <td><input type="text" id="natIll" placeholder="nature of illness"></td>
+          <td><input type="date" id="diagnosed" placeholder="date Diagnosed"></td>
+          <td><input type="text" id="deseasedDate" placeholder="deseased date"></td>
+          <td><input type="text" id="age" onchange="show(8)" placeholder="age"></td>
+        </tr>
+      </table>
     </p>
     <input type="submit" onclick="createPDF()" id="button">
     <!-- <input type="submit" id="button"> -->
