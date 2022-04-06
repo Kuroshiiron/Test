@@ -155,13 +155,13 @@
     <p>
     Are you still suffering the above stated disability?<br>
     <input type="radio" name="ac" id="acyes" value="•"> If yes, please advice the expected date and time of returning to work<br>
-    <input type="number" class="date" id="dayDD" placeholder="DD"> / <input type="number" class="date" id="monthDD" placeholder="MM"> / <input type="number" class="date" id="yearDD" placeholder="YYYY">
-    <input type="radio" name="time" id="DCam" value="•"> AM
-    &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM<br>
+    <input type="number" class="date" id="dayD" placeholder="DD"> / <input type="number" class="date" id="monthD" placeholder="MM"> / <input type="number" class="date" id="yearD" placeholder="YYYY">
+    <input type="radio" name="time" id="Dam" value="•"> AM
+    &ensp;<input type="radio" name="time" id="Dpm" value="•"> PM<br>
     <input type="radio" name="ac" id="acno" value="•"> If no, please advise the date and time of returning to work<br>
-    <input type="number" class="date" id="dayDD" placeholder="DD"> / <input type="number" class="date" id="monthDD" placeholder="MM"> / <input type="number" class="date" id="yearDD" placeholder="YYYY">
-    <input type="radio" name="time" id="DCam"value="•"> AM
-    &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM
+    <input type="number" class="date" id="dayD" placeholder="DD"> / <input type="number" class="date" id="monthD" placeholder="MM"> / <input type="number" class="date" id="yearD" placeholder="YYYY">
+    <input type="radio" name="time" id="Dam"value="•"> AM
+    &ensp;<input type="radio" name="time" id="Dpm" value="•"> PM
     </p>
     <p>
       Have you sustained any fractures from this accident?<br>
@@ -342,9 +342,122 @@
           <td><input type="text" id="natIll" placeholder="nature of illness"></td>
           <td><input type="date" id="diagnosed" placeholder="date Diagnosed"></td>
           <td><input type="text" id="deseasedDate" placeholder="deseased date"></td>
-          <td><input type="text" id="age" onchange="show(8)" placeholder="age"></td>
+          <td><input type="number" id="age" onchange="show(11)" placeholder="age"></td>
         </tr>
       </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="relation2" placeholder="relationship"></td>
+          <td><input type="text" id="natIll2" placeholder="nature of illness"></td>
+          <td><input type="date" id="diagnosed2" placeholder="date Diagnosed"></td>
+          <td><input type="text" id="deseasedDate2" placeholder="deseased date"></td>
+          <td><input type="number" id="age2" onchange="show(12)" placeholder="age"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="relation3" placeholder="relationship"></td>
+          <td><input type="text" id="natIll3" placeholder="nature of illness"></td>
+          <td><input type="date" id="diagnosed3" placeholder="date Diagnosed"></td>
+          <td><input type="text" id="deseasedDate3" placeholder="deseased date"></td>
+          <td><input type="number" id="age3" onchange="show(13)" placeholder="age"></td>
+        </tr>
+      </table>
+      <table class="hidden">
+        <tr>
+          <td><input type="text" id="relation4" placeholder="relationship"></td>
+          <td><input type="text" id="natIll4" placeholder="nature of illness"></td>
+          <td><input type="date" id="diagnosed4" placeholder="date Diagnosed"></td>
+          <td><input type="text" id="deseasedDate4" placeholder="deseased date"></td>
+          <td><input type="number" id="age4" placeholder="age"></td>
+        </tr>
+      </table>
+    </p>
+    <p>
+      Are there any other illness/complaints suffered by you prior to this even? If yes, please provide details.<br>
+      <textarea type="text" id="Idetail" row="3" cols="40" placeholder="write other illness/complaints here.."></textarea>
+    </p>
+    <h4>Section IV: Others</h4>
+    <p>
+      In respect of any other claim, which does not fall within the sections stated above, please provide details of the claim you are submitting.<br>
+      <textarea type="text" id="other1" row="3" cols="40" placeholder="write any other claims that does not fall within the sections stated above here.."></textarea>
+    </p>
+    <p>
+      Date and time of accident:
+      <input type="number" class="date" id="oday" placeholder="DD"> / <input type="number" class="date" id="omonth" placeholder="MM"> / <input type="number" class="date" id="oyear" placeholder="YYYY"><br>
+      <input type="number" id="ohour" placeholder="Hour"> :
+      <input type="number" id="omin" placeholder="Mins">
+      <input type="radio" name="time" id="oam" value="•"> AM
+      &ensp;<input type="radio" name="time" id="opm" value="•"> PM
+    </p>
+    <p>
+      Claimed Amount: <input type="number" id="claimAmt">
+    </p>
+    <p>
+      Have you lodged a police report?<br>
+      <input type="radio" name="orepo" id="oYes" value="•"> Yes
+      &emsp;<input type="radio" name="orepo" id="oNo" value="•"> No<br>
+      Date of report:
+      <input type="number" class="date" id="orday" placeholder="DD"> / <input type="number" class="date" id="ormonth" placeholder="MM"> / <input type="number" class="date" id="oryear" placeholder="YYYY"><br>
+      Police Station you lodged report:<br>
+      <input type="text" id="oreport">
+    </p>
+    <h4>Section V: Details of your other insurance or compensation claims</h4>
+    <table>
+      <tr>
+        <th>Name of Insurer/Third Party</th>
+        <th>Policy/Reference No.</th>
+        <th>Type of Benefit</th>
+        <th>Have you filed a claim?</th>
+        <th>Amount Claimed</th>
+      </tr>
+      <tr>
+        <td><input type="text" id="nameInsured" placeholder="name"></td>
+        <td><input type="text" id="policyno" placeholder="policy/refNo"></td>
+        <td><input type="date" id="typeBen" placeholder="Type of benefits"></td>
+        <td><input type="text" id="filedclaim" ></td>
+        <td><input type="number" id="claimAmt" onchange="show(14)" placeholder="claim amt"></td>
+      </tr>
+    </table>
+    <table class="hidden">
+      <tr>
+        <td><input type="text" id="nameInsured" placeholder="name"></td>
+        <td><input type="text" id="policyno" placeholder="policy/refNo"></td>
+        <td><input type="date" id="typeBen" placeholder="Type of benefits"></td>
+        <td><input type="text" id="filedclaim" ></td>
+        <td><input type="number" id="claimAmt" onchange="show(15)" placeholder="claim amt"></td>
+      </tr>
+    </table>
+    <table class="hidden">
+      <tr>
+        <td><input type="text" id="nameInsured" placeholder="name"></td>
+        <td><input type="text" id="policyno" placeholder="policy/refNo"></td>
+        <td><input type="date" id="typeBen" placeholder="Type of benefits"></td>
+        <td><input type="text" id="filedclaim" ></td>
+        <td><input type="number" id="claimAmt" onchange="show(16)" placeholder="claim amt"></td>
+      </tr>
+    </table>
+    <table class="hidden">
+      <tr>
+        <td><input type="text" id="nameInsured" placeholder="name"></td>
+        <td><input type="text" id="policyno" placeholder="policy/refNo"></td>
+        <td><input type="date" id="typeBen" placeholder="Type of benefits"></td>
+        <td><input type="text" id="filedclaim" ></td>
+        <td><input type="number" id="claimAmt" placeholder="claim amt"></td>
+      </tr>
+    </table>
+    <p>
+      Have your other claims been paid by the other policies above?<br>
+      <input type="radio" name="otherclaim" id="ocYes" value="•"> Yes
+      &emsp;<input type="radio" name="otherclaim" id="ocNo" value="•"> No
+    </p>
+    <h4>Payment Details</h4>
+    <p>
+      Payee Name <small>(name as per bank account)</small>: <input type="text" id="payeeName"><br>
+      Name of Bank: <input type="text" id="bank"><br>
+      Bank Code Branch Code Account Number: <input type="text" id="bkAccNo"><br>
+      Email address <small>(if different from above): </small><input type="email" id="pemail"><br>
+      <small>Notification of payment will be sent to this email address</small>
     </p>
     <input type="submit" onclick="createPDF()" id="button">
     <!-- <input type="submit" id="button"> -->
