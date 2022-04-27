@@ -2,6 +2,9 @@ html {
     margin: 20px;
 }
   
-.hidden, .hidOther {
+.hidden {
    display: none;
+}
+.date{
+    width: 60px;
 }

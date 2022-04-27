@@ -145,8 +145,8 @@
     <input type="number" class="date" id="DCday" placeholder="DD"> / <input type="number" class="date" id="DCmonth" placeholder="MM"> / <input type="number" class="date" id="DCyear" placeholder="YYYY"><br>
       <input type="number" id="DChour" placeholder="Hour"> :
       <input type="number" id="DCmin" placeholder="Mins">
-      <input type="radio" name="time" id="DCam"value="•"> AM
-      &ensp;<input type="radio" name="time" id="DCpm" value="•"> PM
+      <input type="radio" name="DCtime" id="DCam" value="•"> AM
+      &ensp;<input type="radio" name="DCtime" id="DCpm" value="•"> PM
     </p>
     <p>
     Date of Death:
@@ -154,14 +154,14 @@
     </p>
     <p>
     Are you still suffering the above stated disability?<br>
-    <input type="radio" name="ac" id="acyes" value="•"> If yes, please advice the expected date and time of returning to work<br>
+    <input type="radio" name="ac" id="acyes" value="/"> If yes, please advice the expected date and time of returning to work<br>
     <input type="number" class="date" id="dayD" placeholder="DD"> / <input type="number" class="date" id="monthD" placeholder="MM"> / <input type="number" class="date" id="yearD" placeholder="YYYY">
-    <input type="radio" name="time" id="Dam" value="•"> AM
-    &ensp;<input type="radio" name="time" id="Dpm" value="•"> PM<br>
-    <input type="radio" name="ac" id="acno" value="•"> If no, please advise the date and time of returning to work<br>
+    <input type="radio" name="Dtime" id="Dam" value="•"> AM
+    &ensp;<input type="radio" name="Dtime" id="Dpm" value="•"> PM<br>
+    <input type="radio" name="ac" id="acno" value="/"> If no, please advise the date and time of returning to work<br>
     <input type="number" class="date" id="dayD" placeholder="DD"> / <input type="number" class="date" id="monthD" placeholder="MM"> / <input type="number" class="date" id="yearD" placeholder="YYYY">
-    <input type="radio" name="time" id="Dam"value="•"> AM
-    &ensp;<input type="radio" name="time" id="Dpm" value="•"> PM
+    <input type="radio" name="Dtime" id="Dam"value="•"> AM
+    &ensp;<input type="radio" name="Dtime" id="Dpm" value="•"> PM
     </p>
     <p>
       Have you sustained any fractures from this accident?<br>
@@ -217,20 +217,20 @@
           <th>Type of Ward</th>
         </tr>
         <tr>
-          <td><input type="text" id="hospitalname" placeholder="Hospital Name"></td>
-          <td><input type="date" id="admit" placeholder="admission date"></td>
-          <td><input type="date" id="discharged" placeholder="date of discharged"></td>
-          <td><input type="text" id="admNo" placeholder="admission No."></td>
-          <td><input type="text" id="ward" onchange="show(7)" placeholder="Ward type"></td>
+          <td><input type="text" class="hospitalname" placeholder="Hospital Name"></td>
+          <td><input type="date" class="admit" placeholder="admission date"></td>
+          <td><input type="date" class="discharged" placeholder="date of discharged"></td>
+          <td><input type="text" class="admNo" placeholder="admission No."></td>
+          <td><input type="text" class="ward" onchange="show(7)" placeholder="Ward type"></td>
         </tr>
       </table>
       <table class="hidden">
         <tr>
-          <td><input type="text" id="hospitalname2" placeholder="Hospital Name"></td>
-          <td><input type="date" id="admit2" placeholder="admission date"></td>
-          <td><input type="date" id="discharged2" placeholder="date of discharged"></td>
-          <td><input type="text" id="admNo2" placeholder="admission No."></td>
-          <td><input type="text" id="ward2" placeholder="Ward type"></td>
+          <td><input type="text" class="hospitalname" placeholder="Hospital Name"></td>
+          <td><input type="date" class="admit" placeholder="admission date"></td>
+          <td><input type="date" class="discharged" placeholder="date of discharged"></td>
+          <td><input type="text" class="admNo" placeholder="admission No."></td>
+          <td><input type="text" class="ward" placeholder="Ward type"></td>
         </tr>
       </table>
     </p>
